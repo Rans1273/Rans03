@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: lightslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.2);
+}
+
+.container .left{
+    position: relative;
+    background: #167266;
+    padding: 40px;
+}
+
+.ProfileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ProfileText .imglogo{
+    position: relative;
+    width: 200px;
+    height: 250px;
+}
+
+.ProfileText .imglogo img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ProfileText h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.ProfileText h2 span{
+    color: #06f6d7;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.info{
+    padding: 40px;
+}
+
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    margin-bottom: 20px;
+}
+
+.info ul{
+    position: relative;
+}
+
+.info ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.info ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 20px;
+    color: #0af6d7;
+}
+
+.info ul a span{
+    color: #fff;
+    font-weight: 200;
+    font-size: 0.8em;
+}
+
+.info.pendidikan li{
+    margin-bottom: 15px;
+}
+
+.info.pendidikan h5{
+    color: #06f6d7;
+    font-weight: 500;
+}
+
+.info.pendidikan h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+
+.info.pendidikan h4{
+    color: #fff;
+    font-weight: 300;
+}
+
+.info.dataperibadi{
+    position: relative;
+    color: #06f6d7;
+}
+
+.info.dataperibadi h5{
+    position: relative;
+    color: #fff;
+}
+
+.container .right{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+
+.about{
+    margin-bottom: 50px;
+}
+
+.about .profilimg{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 5px solid #06f6d7;
+}
+
+.about .profilimg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.about:last-child{
+    margin-bottom: 0px;
+}
+
+.title2{
+    color: #167266;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.p{
+    color: #333;
+}
+
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.about .box .pengalaman{
+    min-width: 150px;
+}
+
+.about .box .pengalaman h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+
+.about .box .text h4{
+    text-transform: uppercase;
+    color: #06f6d7;
+    font-size: 16px;
+}
+
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .box h4{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 500;
+}
+
+.skills .box .precent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+
+.skills .box .precent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #06f6d7;
+}
+
+.kesenangan ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.kesenangan ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 12px 0;
+}
+
+.kesenangan ul li .icon{
+    color: #06f6d7;
+    font-size: 18px;
+    width: 35px;
+}
+
+@media(max-width: 1000px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .kesenangan ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .about .box {
+        flex-direction: column;
+    }
+
+    .about .box .pengalaman {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .kesenangan ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .skills .box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
